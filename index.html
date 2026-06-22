@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <main class="app-container">
+        <header class="navbar">
+            <div class="brand">
+                <span class="icon">📱</span>
+                <h1>Weather App</h1>
+            </div>
+            <form id="search-form" class="search-form">
+                <input type="text" id="search-input" placeholder="Lagos" required>
+                <button type="submit" id="search-btn">Search</button>
+            </form>
+        </header>
+
+        <div id="error-message" class="error-box hidden"></div>
+
+        <div id="loading-state" class="loading-box hidden">Loading...</div>
+
+        <div id="weather-dashboard">
+            
+            <section class="hero-section">
+                <div id="current-icon" class="main-weather-icon">☀️</div>
+                <h2 id="location-name">Lagos, Nigeria</h2>
+                <div id="current-temp" class="temperature-display">32°C</div>
+                <p id="weather-desc">Sunny · Feels like --</p>
+            </section>
+
+            <section class="stats-row">
+                <div class="stat-col">
+                    <span class="stat-label">Humidity</span>
+                    <strong id="stat-humidity" class="stat-value">78%</strong>
+                </div>
+                <div class="stat-col">
+                    <span class="stat-label">Wind</span>
+                    <strong id="stat-wind" class="stat-value">14 km/h</strong>
+                </div>
+                <div class="stat-col">
+                    <span class="stat-label">UV Index</span>
+                    <strong id="stat-uv" class="stat-value">High</strong>
+                </div>
+            </section>
+
+            <section class="forecast-section">
+                <h3>5-DAY FORECAST</h3>
+                <div id="forecast-container" class="forecast-list">
+                    </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

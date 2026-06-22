@@ -1,0 +1,246 @@
+/* Universal Base Layout Styling Configurations */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Master App Container Window Centering */
+.app-container {
+    width: 100%;
+    max-width: 450px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+/* Top Navigation Bar Component Layout styling */
+.navbar {
+    background-color: #1A3C5E;
+    color: #ffffff;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.brand h1 {
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.search-form {
+    display: flex;
+    gap: 8px;
+}
+
+.search-form input {
+    flex: 1;
+    padding: 10px 14px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.search-form button {
+    background-color: #2E86AB;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.search-form button:hover {
+    background-color: #1F617E;
+    transform: translateY(-1px);
+}
+
+/* Teal/Blue Current Conditions Hero Section Layout Container */
+.hero-section {
+    background-color: #2E86AB;
+    color: #ffffff;
+    margin: 16px;
+    padding: 24px 16px;
+    border-radius: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.main-weather-icon {
+    font-size: 3.5rem;
+    margin-bottom: 4px;
+}
+
+.hero-section h2 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    opacity: 0.95;
+}
+
+.temperature-display {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+#weather-desc {
+    font-size: 0.95rem;
+    opacity: 0.85;
+}
+
+/* Metadata Statistics Row Flexbox Column Equal Distribution Setup */
+.stats-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 16px 20px 16px;
+    background-color: #ffffff;
+    border: 1px solid #f0f2f5;
+    border-radius: 12px;
+    padding: 12px 0;
+}
+
+.stat-col {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.stat-col:not(:last-child) {
+    border-right: 1px solid #f0f2f5;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: #8892a0;
+}
+
+.stat-value {
+    font-size: 0.95rem;
+    color: #1A3C5E;
+    font-weight: bold;
+}
+
+/* 5-Day Forecast Grid Area UI Component Styles */
+.forecast-section {
+    padding: 0 16px 20px 16px;
+}
+
+.forecast-section h3 {
+    font-size: 0.75rem;
+    color: #8892a0;
+    margin-bottom: 12px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.forecast-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.forecast-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background-color: #f8fafc;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
+
+.forecast-row:hover {
+    background-color: #f1f5f9;
+    transform: scale(1.01);
+}
+
+.forecast-day {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #1A3C5E;
+    width: 100px;
+}
+
+.forecast-icon {
+    font-size: 1.25rem;
+}
+
+.forecast-temps {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+}
+
+.high-temp {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #1A3C5E;
+}
+
+.low-temp {
+    font-size: 0.8rem;
+    color: #8892a0;
+}
+
+/* System Auxiliary State Presentation Styling Hooks */
+.hidden {
+    display: none !important;
+}
+
+.error-box {
+    background-color: #fee2e2;
+    color: #dc2626;
+    padding: 12px;
+    margin: 16px;
+    border-radius: 8px;
+    border: 1px solid #fca5a5;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.loading-box {
+    color: #1A3C5E;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* Responsive Structural Breakpoint Rule (Screens Narrower than 480px) */
+@media (max-width: 480px) {
+    body {
+        padding: 0;
+    }
+    .app-container {
+        max-width: 100%;
+        min-height: 100vh;
+        border-radius: 0;
+    }
+}
